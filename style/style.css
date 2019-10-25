@@ -1,0 +1,1138 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Bertha";
+  src: url("fonts/Bertha-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Bertha";
+  src: url("fonts/Bertha-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Bertha";
+  src: url("fonts/Bertha-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Bertha";
+  src: url("fonts/Bertha-ShadowLine.ttf") format("truetype");
+  font-weight: 100;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 90px 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #cccccc;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f6e3ff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  height: 75vh;
+  justify-content: center;
+  align-items: center;
+  background: #5840bb;
+  border-radius: 30px;
+  padding: 0 10px;
+  font-family: "Didact Gothic", sans-serif;
+}
+.content .leftContainer {
+  height: 100%;
+  width: 60%;
+  background: transparent;
+  padding-right: 10px;
+}
+.content .leftContainer .navLogo {
+  padding: 60px 42px 48px;
+  display: flex;
+  flex-direction: row;
+  height: 15vh;
+}
+.content .leftContainer .navLogo .fourCircles {
+  width: 28px;
+  height: 28px;
+  position: relative;
+}
+.content .leftContainer .navLogo .fourCircles .circle {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: #f7f6a9;
+  border-radius: 50%;
+}
+.content .leftContainer .navLogo .fourCircles .circle:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+.content .leftContainer .navLogo .fourCircles .circle:nth-child(3) {
+  bottom: 0;
+  right: 0;
+}
+.content .leftContainer .navLogo .fourCircles .circle:nth-child(4) {
+  bottom: 0;
+  left: 0;
+}
+.content .leftContainer .navLogo .logo {
+  font-family: "Bertha";
+  color: #eeecf8;
+  font-weight: bold;
+  margin-left: 8%;
+  font-size: 1.3rem;
+  letter-spacing: 1.6px;
+  cursor: pointer;
+}
+.content .leftContainer .leftContent {
+  padding-left: 15%;
+  padding-right: 70px;
+  overflow-y: hidden;
+  height: 60vh;
+  padding-bottom: 10vh;
+  padding-top: 80px;
+}
+.content .leftContainer .leftContent .search .searchInp {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: none;
+  color: #f7f6a0;
+  font-size: 2.5rem;
+  margin-bottom: 46px;
+}
+.content .leftContainer .leftContent .search .searchInp::placeholder {
+  color: #eeecf8;
+  opacity: 0.1;
+}
+.content .leftContainer .leftContent .search .searchContent {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(42px, 1fr)) minmax(46px, 1.3fr) minmax(15px, 0.6fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  min-height: 15vw;
+  grid-auto-rows: auto;
+}
+.content .leftContainer .leftContent .search .searchContent .trends {
+  grid-area: 1/1/2/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+}
+.content .leftContainer .leftContent .search .searchContent .trends:hover {
+  color: #5840bb;
+  background: #fff;
+}
+.content .leftContainer .leftContent .search .searchContent .trends:active {
+  border-radius: 50%;
+}
+.content .leftContainer .leftContent .search .searchContent .recipe {
+  background: #fff;
+  border-radius: 30px;
+  grid-area: 1/2/3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+.content .leftContainer .leftContent .search .searchContent .recipe:hover {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.content .leftContainer .leftContent .search .searchContent .recipe:active {
+  background: #fff;
+  color: black;
+  border: none;
+}
+.content .leftContainer .leftContent .search .searchContent .recipe .pan {
+  background: url("img/cooking.png") no-repeat center center;
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+.content .leftContainer .leftContent .search .searchContent .recipe p {
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+  text-align: center;
+  width: 140px;
+}
+.content .leftContainer .leftContent .search .searchContent .pictureOne {
+  grid-area: 1/4/2/5;
+  background: url("img/book.jfif") no-repeat center center;
+  background-size: cover;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+.content .leftContainer .leftContent .search .searchContent .pictureOne:active {
+  border-radius: 20px;
+}
+.content .leftContainer .leftContent .search .searchContent .memeCats {
+  background: #fff;
+  border-radius: 30px;
+  grid-area: 1/5/2/7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0c0c0c;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+.content .leftContainer .leftContent .search .searchContent .memeCats span {
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+  transition: all 0.3s ease;
+}
+.content .leftContainer .leftContent .search .searchContent .memeCats:hover span {
+  transform: translateY(-5px);
+}
+.content .leftContainer .leftContent .search .searchContent .memeCats:active {
+  border-radius: 35px;
+}
+.content .leftContainer .leftContent .search .searchContent .memeCats:active span {
+  transform: scale(1.2, 1.2) translateY(0px);
+}
+.content .leftContainer .leftContent .search .searchContent .pictureTwo {
+  grid-area: 2/1/3/2;
+  background: url("img/pictureOne.jpeg") no-repeat center center;
+  background-size: cover;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+.content .leftContainer .leftContent .search .searchContent .pictureTwo:active {
+  border-radius: 20px;
+}
+.content .leftContainer .leftContent .search .searchContent .breathtaking {
+  background: #724fff;
+  border-radius: 30px;
+  grid-area: 2/4/3/6;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+}
+.content .leftContainer .leftContent .search .searchContent .breathtaking:hover {
+  background: #8060ff;
+}
+.content .leftContainer .leftContent .search .searchContent .breathtaking:active .fire {
+  left: -12px;
+}
+.content .leftContainer .leftContent .search .searchContent .breathtaking:active p {
+  left: -7px;
+}
+.content .leftContainer .leftContent .search .searchContent .breathtaking .fire {
+  background: url("img/fire.png") no-repeat center center;
+  background-size: cover;
+  width: 27px;
+  height: 27px;
+  position: relative;
+  left: -20px;
+  transition: all 0.3s ease-out;
+}
+.content .leftContainer .leftContent .search .searchContent .breathtaking p {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  position: relative;
+  left: 0;
+  transition: all 0.3s ease-out;
+}
+.content .leftContainer .leftContent .search .searchContent .breathtaking b {
+  font-weight: 600;
+  display: block;
+}
+.content .leftContainer .leftContent .search .searchContent .pictureOne,
+.content .leftContainer .leftContent .search .searchContent .pictureTwo,
+.content .leftContainer .leftContent .search .searchContent .trends {
+  border-radius: 30px;
+}
+.content .leftContainer .leftContent .explore {
+  color: #fff;
+}
+.content .leftContainer .leftContent .explore h3 {
+  font-size: 2.3rem;
+  letter-spacing: 2px;
+  margin-top: 10%;
+}
+.content .leftContainer .leftContent .explore .exploreNav {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4%;
+}
+.content .leftContainer .leftContent .explore .exploreNav ul {
+  display: flex;
+  flex-direction: row;
+}
+.content .leftContainer .leftContent .explore .exploreNav ul li {
+  font-family: "Poppins";
+  font-size: 1rem;
+  list-style-type: none;
+  letter-spacing: 0.6px;
+  font-weight: 400;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  position: relative;
+}
+.content .leftContainer .leftContent .explore .exploreNav ul li::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  position: absolute;
+  border-radius: 50%;
+  top: 38px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.content .leftContainer .leftContent .explore .exploreNav ul li:hover {
+  opacity: 1;
+}
+.content .leftContainer .leftContent .explore .exploreNav ul li:hover::after {
+  opacity: 1;
+}
+.content .leftContainer .leftContent .explore .exploreNav ul li:nth-child(1) {
+  opacity: 1;
+  margin-right: 10%;
+}
+.content .leftContainer .leftContent .explore .exploreNav ul li:nth-child(1)::after {
+  opacity: 1;
+}
+.content .leftContainer .leftContent .explore .exploreNav ul li:nth-child(2) {
+  margin-right: 10%;
+}
+.content .leftContainer .leftContent .explore .exploreNav ul li:nth-child(3) {
+  margin-right: 10%;
+}
+.content .leftContainer .leftContent .explore .exploreNav ul li:nth-child(4) {
+  margin-right: 10%;
+}
+.content .leftContainer .leftContent .explore .exploreNav .exploreButton {
+  width: 20px;
+  height: 17px;
+  position: relative;
+  top: 5px;
+  margin-left: 40%;
+  transition: all 0.5s ease-out;
+}
+.content .leftContainer .leftContent .explore .exploreNav .exploreButton:hover {
+  transform: rotate(180deg);
+}
+.content .leftContainer .leftContent .explore .exploreNav .exploreButton:active .topLine {
+  transform: rotate(90deg);
+  right: -3px;
+  top: 6px !important;
+}
+.content .leftContainer .leftContent .explore .exploreNav .exploreButton:active .botLine {
+  transform: rotate(90deg);
+  bottom: 0px;
+  left: -3px;
+}
+.content .leftContainer .leftContent .explore .exploreNav .exploreButton:active .botDot {
+  bottom: -4px !important;
+}
+.content .leftContainer .leftContent .explore .exploreNav .exploreButton:active .topDot {
+  top: 2px !important;
+}
+.content .leftContainer .leftContent .explore .exploreNav .exploreButton .topDot {
+  width: 7px;
+  height: 6px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+.content .leftContainer .leftContent .explore .exploreNav .exploreButton .topLine {
+  width: 12px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 2px;
+  right: 0;
+  transition: all 0.3s ease-out;
+}
+.content .leftContainer .leftContent .explore .exploreNav .exploreButton .botDot {
+  width: 7px;
+  height: 6px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+.content .leftContainer .leftContent .explore .exploreNav .exploreButton .botLine {
+  width: 12px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  transition: all 0.3s ease-out;
+}
+.content .leftContainer .leftContent .explore .exploreContent {
+  min-height: 1200px;
+  margin-top: 60px;
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-areas: "divOne divTwo divThree" "divOne divTwo divThree" "divFour divFive divSix" "divSeven divFive divSix" "divSeven divFive divNine" ". divEight divNine";
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(1) {
+  border-radius: 30px;
+  grid-area: divOne;
+  overflow: hidden;
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(1):hover .background {
+  transform: scale(1.2, 1.2);
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(1) .background {
+  background: url("img/explore1.jpg") no-repeat center center;
+  background-size: cover;
+  transition: all 0.2s ease-out;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(2) {
+  border-radius: 30px;
+  grid-area: divTwo;
+  overflow: hidden;
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(2):hover .background {
+  transform: scale(1.3, 1.3) translateY(20px);
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(2) .background {
+  background: url("img/edited3.jpg") no-repeat center center;
+  background-size: cover;
+  transition: all 0.6s ease;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(3) {
+  border-radius: 30px;
+  grid-area: divThree;
+  overflow: hidden;
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(3):hover .background {
+  transform: scale(1.2, 1.2);
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(3) .background {
+  background: url("img/edited1.jpg") no-repeat center center;
+  background-size: cover;
+  transition: all 0.6s ease;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(4) {
+  border-radius: 30px;
+  grid-area: divFour;
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(4):hover .background {
+  transform: translateX(-10%);
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(4) .background {
+  background: url("img/explore6.jpg") no-repeat center center;
+  background-size: cover;
+  transition: all 0.6s ease;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(5) {
+  border-radius: 30px;
+  grid-area: divFive;
+  overflow: hidden;
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(5):hover .background {
+  transform: scale(0.9, 0.9);
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(5) .background {
+  background: url("img/explore2.jpg") no-repeat center center;
+  background-size: cover;
+  transition: all 0.6s ease;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(6) {
+  border-radius: 30px;
+  grid-area: divSix;
+  overflow: hidden;
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(6):hover .background {
+  transform: scale(1.3, 1.3);
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(6) .background {
+  background: url("img/explore4.jpg") no-repeat center center;
+  background-size: cover;
+  transition: all 0.6s ease;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(7) {
+  border-radius: 30px;
+  grid-area: divSeven;
+  overflow: hidden;
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(7):hover .background {
+  transform: scale(1.2, 1.2);
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(7) .background {
+  background: url("img/edited2.jpg") no-repeat center center;
+  background-size: cover;
+  transition: all 0.6s ease;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(8) {
+  border-radius: 30px;
+  grid-area: divEight;
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(8):hover .background {
+  transform: translateX(-30%);
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(8) .background {
+  background: url("img/explore7.jpg") no-repeat center center;
+  background-size: cover;
+  transition: all 0.5s ease-in;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(9) {
+  border-radius: 30px;
+  grid-area: divNine;
+  overflow: hidden;
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(9):hover .background {
+  transform: scale(1.3, 1.3);
+}
+.content .leftContainer .leftContent .explore .exploreContent .exploreDiv:nth-child(9) .background {
+  background: url("img/explore5.jpg") no-repeat center center;
+  background-size: cover;
+  transition: all 0.6s ease;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+.content .rightContainer {
+  height: calc(100% - 20px);
+  width: 40%;
+  background: #ffff;
+  position: relative;
+  border-radius: 30px;
+  padding-left: 50px;
+  padding-right: 10px;
+  /* width */
+  /* Track */
+  /* Handle on hover */
+}
+.content .rightContainer .rightContent::-webkit-scrollbar-thumb {
+  background: #5840bb;
+  border-radius: 10px;
+}
+.content .rightContainer .rightContent::-webkit-scrollbar {
+  width: 5px;
+}
+.content .rightContainer .rightContent::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 250px 0;
+}
+.content .rightContainer .rightContent::-webkit-scrollbar-thumb:hover {
+  background: #cccccc;
+}
+.content .rightContainer .rightContent {
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 40px;
+}
+.content .rightContainer .rightNav {
+  padding: 50px 0px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  /* Effect 17: move up fade out, push border */
+}
+.content .rightContainer .rightNav .leftSide span {
+  color: #f6e3ff;
+  text-shadow: none;
+  padding: 10px 0;
+  position: relative;
+}
+.content .rightContainer .rightNav .leftSide span::before {
+  color: #000;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+  content: attr(data-hover);
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  pointer-events: none;
+}
+.content .rightContainer .rightNav .leftSide span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: black;
+  opacity: 0;
+  -webkit-transform: translateY(5px);
+  -moz-transform: translateY(5px);
+  transform: translateY(5px);
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  pointer-events: none;
+}
+.content .rightContainer .rightNav .leftSide span:hover::before,
+.content .rightContainer .rightNav .leftSide span:focus::before {
+  opacity: 0;
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+.content .rightContainer .rightNav .leftSide span:hover::after,
+.content .rightContainer .rightNav .leftSide span:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+.content .rightContainer .rightNav .leftSide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.content .rightContainer .rightNav .leftSide span {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.content .rightContainer .rightNav .leftSide span:nth-child(1) {
+  margin-right: 40px;
+}
+.content .rightContainer .rightNav .rightSideImg {
+  width: 52px;
+  height: 52px;
+  background: url("img/user.jpg") no-repeat center center;
+  background-size: cover;
+  border-radius: 20px;
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+}
+.content .rightContainer .tips {
+  padding-top: 140px;
+}
+.content .rightContainer .tips .headerTips {
+  font-family: "Poppins";
+  font-size: 2.2rem;
+  position: relative;
+}
+.content .rightContainer .tips .headerTips span {
+  font-weight: bold;
+}
+.content .rightContainer .tips .headerTips::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "42";
+  width: 35px;
+  height: 35px;
+  background: #f8f7a9;
+  color: #000;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -28px;
+  left: 210px;
+}
+.content .rightContainer .tips .tipContainer {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  display: grid;
+  grid-template-areas: "first second third";
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  height: 200px;
+  grid-template-rows: 200px;
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
+}
+.content .rightContainer .tips .tipContainer .tipContent {
+  background: green;
+  width: 100%;
+  border-radius: 30px;
+}
+.content .rightContainer .tips .tipContainer .tipContent:nth-child(1) {
+  background: url("img/tomato.jpg") no-repeat center center;
+  background-size: cover;
+  grid-area: first;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.content .rightContainer .tips .tipContainer .tipContent:nth-child(1) button {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  width: 112px;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-family: "Poppins";
+  position: absolute;
+  bottom: 20px;
+  overflow: hidden;
+  transition: 0.3s transform ease-out;
+}
+.content .rightContainer .tips .tipContainer .tipContent:nth-child(1) button::after {
+  background-color: yellow;
+  border-radius: 30px;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.3s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+.content .rightContainer .tips .tipContainer .tipContent:nth-child(1) button:hover::after {
+  transform: translate(0, 0);
+}
+.content .rightContainer .tips .tipContainer .tipContent:nth-child(1) button:hover {
+  color: indigo;
+  transform: scale(1.05);
+  will-change: transform;
+}
+.content .rightContainer .tips .tipContainer .tipContent:nth-child(1) button:active {
+  transform: scale(0.9);
+}
+.content .rightContainer .tips .tipContainer .tipContent:nth-child(2) {
+  background: #f7f7f7;
+  grid-area: second;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.content .rightContainer .tips .tipContainer .tipContent:nth-child(2) p {
+  font-family: "Poppins";
+  width: 70%;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-right: 0px;
+}
+.content .rightContainer .tips .tipContainer .tipContent:nth-child(2) .umbrella {
+  margin-top: 25%;
+  background: url("img/umbrella.png") no-repeat center center;
+  background-size: cover;
+  height: 34px;
+  width: 30px;
+}
+.content .rightContainer .tips .tipContainer .tipContent:nth-child(3) {
+  background: #f7f7f7;
+  grid-area: third;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.content .rightContainer .tips .tipContainer .tipContent:nth-child(3) p {
+  text-align: center;
+  font-family: "Poppins";
+  width: 70%;
+  font-size: 0.9rem;
+}
+.content .rightContainer .tips .tipContainer .tipContent:nth-child(3) .emojis {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 25%;
+}
+.content .rightContainer .tips .tipContainer .tipContent:nth-child(3) .emojis .sadEmoji {
+  width: 24px;
+  height: 24px;
+  background: url("img/sad.png") no-repeat center center;
+  background-size: cover;
+  margin-right: 18px;
+}
+.content .rightContainer .tips .tipContainer .tipContent:nth-child(3) .emojis .happyEmoji {
+  width: 24px;
+  height: 26px;
+  background: url("img/thumbs.png") no-repeat center center;
+  background-size: cover;
+}
+.content .rightContainer .music {
+  font-family: "Poppins";
+  margin-top: 15%;
+}
+.content .rightContainer .music h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.content .rightContainer .music .musicContent {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+}
+.content .rightContainer .music .musicContent .song {
+  background: #f5e2fe;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  width: 272px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+.content .rightContainer .music .musicContent .song .songImg {
+  background: url("img/album-image.jpg") no-repeat center center;
+  background-size: cover;
+  height: 52px;
+  width: 52px;
+  border-radius: 10px;
+}
+.content .rightContainer .music .musicContent .song .songName {
+  margin-right: 42px;
+  margin-left: 19px;
+  font-size: 0.9rem;
+}
+.content .rightContainer .music .musicContent .song .songName p span {
+  color: #cfc0d5;
+  display: block;
+}
+.content .rightContainer .music .musicContent .song .pause {
+  width: 18px;
+  height: 20px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.content .rightContainer .music .musicContent .song .pause .line {
+  width: 6px;
+  height: 20px;
+  background: #000;
+  position: absolute;
+}
+.content .rightContainer .music .musicContent .song .pause .line:nth-child(1) {
+  left: 0px;
+}
+.content .rightContainer .music .musicContent .song .pause .line:nth-child(2) {
+  right: 0px;
+}
+.content .rightContainer .music .musicContent .song .pause:hover {
+  transform: scale(1.1);
+}
+.content .rightContainer .music .musicContent .song .pause:active {
+  transform: scale(0.9);
+}
+.content .rightContainer .music .musicContent .next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  margin-left: 20px;
+}
+.content .rightContainer .music .musicContent .next p {
+  font-size: 0.9rem;
+  text-align: center;
+}
+.content .rightContainer .music .musicContent .next p span {
+  display: block;
+  color: #d8d8d8;
+}
+.content .rightContainer .calendar {
+  font-family: "Poppins";
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  padding-bottom: 50px;
+}
+.content .rightContainer .calendar h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.content .rightContainer .calendar .dots {
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .rightContainer .calendar .dots:hover .calendarDot:nth-child(1) {
+  background: #f1edff;
+}
+.content .rightContainer .calendar .dots:hover .calendarDot:nth-child(2) {
+  background: #724fff;
+}
+.content .rightContainer .calendar .dots .calendarDot {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.content .rightContainer .calendar .dots .calendarDot:nth-child(1) {
+  background: #724fff;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.content .rightContainer .calendar .dots .calendarDot:nth-child(2) {
+  background: #f1edff;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1420px) {
+  html {
+    font-size: 14px;
+  }
+
+  .tipContent:nth-child(1) button {
+    height: 30px !important;
+    width: 90px !important;
+  }
+
+  .tipContent:nth-child(2) p {
+    width: 97% !important;
+  }
+
+  .tipContent:nth-child(3) p {
+    width: 97% !important;
+  }
+
+  .next p {
+    width: 80px;
+  }
+
+  .song {
+    width: 230px !important;
+    height: 80px !important;
+  }
+  .song .songImg {
+    height: 40px !important;
+    width: 40px !important;
+  }
+  .song .songName {
+    font-size: 0.8rem !important;
+    margin-left: 4% !important;
+    margin-right: 9% !important;
+  }
+  .song .pause {
+    height: 16px !important;
+    width: 12px !important;
+  }
+  .song .pause .line {
+    width: 4px !important;
+    height: 12px !important;
+  }
+
+  .tipContainer {
+    height: 150px !important;
+    grid-template-rows: 150px !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .tipContent:nth-child(1) button {
+    width: 80px !important;
+    font-size: 0.9rem;
+    height: 25px !important;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .exploreNav {
+    position: relative;
+  }
+  .exploreNav .exploreButton {
+    position: absolute !important;
+    right: 0px;
+  }
+
+  .tipContainer {
+    height: 130px !important;
+    grid-template-rows: 130px !important;
+  }
+
+  .tipContent:nth-child(1) button {
+    width: 70px !important;
+    font-size: 0.8rem;
+    height: 20px !important;
+    bottom: 25px !important;
+  }
+
+  .tipContent:nth-child(2) p {
+    font-size: 0.8rem !important;
+  }
+
+  .tipContent:nth-child(3) p {
+    font-size: 0.8rem !important;
+  }
+
+  .next {
+    margin-left: 0px !important;
+  }
+
+  .exploreContent {
+    min-height: 800px !important;
+  }
+
+  .searchContent {
+    grid-template-columns: repeat(3, minmax(42px, 1fr)) !important;
+    grid-template-rows: repeat(4, 1fr) !important;
+    min-height: 40vh !important;
+  }
+  .searchContent .trends {
+    grid-area: 1/1/2/2 !important;
+  }
+  .searchContent .recipe {
+    border-radius: 30px !important;
+    grid-area: 1/2/3/4 !important;
+  }
+  .searchContent .pictureOne {
+    grid-area: 2/1/3/2 !important;
+  }
+  .searchContent .memeCats {
+    border-radius: 30px !important;
+    grid-area: 3/1/4/2 !important;
+  }
+  .searchContent .pictureTwo {
+    grid-area: 4/1/5/3 !important;
+  }
+  .searchContent .breathtaking {
+    border-radius: 30px !important;
+    grid-area: 3/2/4/4 !important;
+  }
+  .searchContent .pictureOne,
+.searchContent .pictureTwo,
+.searchContent .trends {
+    border-radius: 30px !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .rightContent {
+    min-height: 600px !important;
+    padding-right: 10px !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .next {
+    display: none !important;
+  }
+
+  .exploreButton {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .exploreContent {
+    min-height: 600px !important;
+  }
+}
+@media screen and (max-width: 620px) {
+  .exploreContent {
+    min-height: 400px !important;
+  }
+  .exploreContent .exploreDiv:nth-child(8):hover .background {
+    transform: translateX(-30px) !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
