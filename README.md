@@ -1,6 +1,6 @@
 # Modern-look
 
-A modern looking website that I made in HTML and SASS. The design was made by Cuberto!
+A modern looking website that I made in **HTML** and **SASS**. The design was made by Cuberto!
 
 website to the designer's image https://dribbble.com/shots/6762299-Artificial-Intelligence-Browser
 
